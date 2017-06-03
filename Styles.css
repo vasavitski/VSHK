@@ -20,43 +20,123 @@
 	top: 330px;
 	left: 80px;
 }
-.videoClips
+
+#board
+{
+	display: block;
+	width: 75px;
+	height: 75px;
+	border-radius: 2px;
+	position: relative;
+	top: 65px;
+	left: 420px;
+	background-size: 100%;
+	border: 1px solid;
+}
+.ticket
+{
+	display: block;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 50px;
+	height: 35px;
+	background-size: 100%;
+}
+
+.ticket:hover
+{
+	width: 200px;
+	height: 160px;
+	transition: 1s;	
+}
+
+#videoClips_show
 {
 	display: block;
 	width: 100px;
 	height: 66px;
-	border-radius: 2px gray;
-	position: absolute;
+	border-radius: 10px gray;
+	position: relative;
 	padding-left: 5px;
 	transition: 1s;
 	top: 250px;
-	left: 180px;
+	left: 90px;
+	margin-left: 30px;
+	border: 1px solid;
+	background: gray;
 }
 
 .clip_item
 {
 	visibility: hidden;
-	display: inline-block;
+	display: block;
 	width: 100px;
 	height: 20px;
-	border: 1px solid;
+	border: 1px solid red;
 	border-radius: 10px gray;
 	text-align: center;
 	color: white;
-}
-
-#projector:hover ~ .videoClips
-{
+	
+	border-radius: 10px gray;
+	position: relative;
+	padding-left: 5px;
+	transition: 1s;
+	top: 250px;
+	left: 90px;
+	
 	border: 1px solid;
 	background: gray;
+	/*opacity: 0.8;*/
 }
-#projector:hover ~ .videoClips > .clip_item
+.videoKlip
+{
+	visibility: hidden;
+	position: relative;
+	top: -30px;
+	left: 30px;
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	/*opacity: 1;*/
+	z-index: 1;
+		transition: 0.3s;
+}
+
+.clip_item:hover .videoKlip
 {
 	visibility: visible;
 }
+#boardFULL
+{
+	visibility: hidden;
+	display: block;
+	width: 300px;
+	height: 202px;
+	border-radius: 2px;
+	position: relative;
+	top: 15px;
+	left: 420px;
+	background-size: 100%;
+	transition: 1s;
+}
+/*#projector:hover ~ .videoClips
+{
+	border: 1px solid;
+	background: gray;
+}/*
+/*#projector:hover ~ .videoClips > .clip_item
+{
+	visibility: visible;
+}*/
 #projector_ik
 {
 animation: tw 2s infinite;
+}
+
+#board
+{
+animation: tw2 1s infinite;
 }
 
 @keyframes tw
@@ -67,4 +147,13 @@ animation: tw 2s infinite;
 	{fill: yellow;}
 	100%
 	{fill: red;}
+}
+@keyframes tw2
+{
+	0%
+	{border-color: white;}
+	30%
+	{border-color: yellow;}
+	100%
+	{border-color: red;}
 }
